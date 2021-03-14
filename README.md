@@ -14,7 +14,7 @@
 
 `minikube service my-release-wordpress` > ← this alllowed me to access the loadbalancer service at 127.0.0.1 on port 56383
 
-![image](screenshots/capture1.png)
+![image](/screenshots/capture1.png)
 ![image](screenshots/capture2.png)
 ![image](screenshots/capture3.png)
 ![image](screenshots/capture4.png)
