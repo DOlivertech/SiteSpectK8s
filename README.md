@@ -12,15 +12,17 @@
 
 `kubectl get svc --namespace default -w my-release-wordpress` to watch the deployment of the install. There is a mariadb pod as well as a my-release-wordpress pod that has the front end of the wordpress install exposed.
 
-`minikube service my-release-wordpress` > ← this alllowed me to access the loadbalancer service at 127.0.0.1 on port 56383
+`minikube service my-release-wordpress` > ← this alllowed me to access the loadbalancer service at 127.0.0.1 on port 56383 
 
-![image](/screenshots/capture1.png)
-![image](screenshots/capture2.png)
-![image](screenshots/capture3.png)
-![image](screenshots/capture4.png)
-![image](screenshots/capture5.png)
-![image](screenshots/capture6.png)
-![image](screenshots/capture7.png)
+
+
+![](https://github.com/DOlivertech/SiteSpectK8s/blob/main/screenshots/capture1.PNG) 
+![](https://github.com/DOlivertech/SiteSpectK8s/blob/main/screenshots/capture2.PNG)  
+![](https://github.com/DOlivertech/SiteSpectK8s/blob/main/screenshots/capture3.PNG)
+![](https://github.com/DOlivertech/SiteSpectK8s/blob/main/screenshots/capture4.PNG)
+![](https://github.com/DOlivertech/SiteSpectK8s/blob/main/screenshots/capture5.PNG)
+![](https://github.com/DOlivertech/SiteSpectK8s/blob/main/screenshots/capture6.PNG)
+![](https://github.com/DOlivertech/SiteSpectK8s/blob/main/screenshots/capture7.PNG)
 
 ## **For Prometheus**
 
@@ -34,7 +36,7 @@
 
 `helm install prometheus prometheus-community/kube-prometheus-stack` > ← install and call it prometheus
 
-![image](screenshots/capture8.png)
+![image](https://github.com/DOlivertech/SiteSpectK8s/blob/main/screenshots/capture8.PNG)
 
 `kubectl get pods` > ← waiting for the pods to spin up
 
@@ -46,9 +48,9 @@
 
 > NodeExporter Daemon translates workernode metrics ( cpu usage, server load, etc ) to prometheus metrics
 
-![image](screenshots/capture9.png)
-![image](screenshots/capture10.png)
-![image](screenshots/Capture.png)
+![image](https://github.com/DOlivertech/SiteSpectK8s/blob/main/screenshots/capture9.PNG)
+![image](https://github.com/DOlivertech/SiteSpectK8s/blob/main/screenshots/capture10.PNG)
+![image](https://github.com/DOlivertech/SiteSpectK8s/blob/main/screenshots/Capture.PNG)
 
 `kubectl get configmaps` ← displays the configmaps
 
@@ -68,28 +70,28 @@
 
 `kubectl port-forward deployment/prometheus-grafana 3000` ← exposes grafana on port 3000 ( creds admin, prom-operator ( default pw for the chart )
 
-![image](screenshots/capture11.png)
-![image](screenshots/capture12.png)
-![image](screenshots/capture13.png)
-![image](screenshots/capture14.png)
+![image](https://github.com/DOlivertech/SiteSpectK8s/blob/main/screenshots/capture11.PNG)
+![image](https://github.com/DOlivertech/SiteSpectK8s/blob/main/screenshots/capture12.PNG)
+![image](https://github.com/DOlivertech/SiteSpectK8s/blob/main/screenshots/capture13.PNG)
+![image](https://github.com/DOlivertech/SiteSpectK8s/blob/main/screenshots/capture14.PNG)
 
 `manage > dashboard > k8s>compute resources>pod/my-releae-mariadb-0` shows the metrics for the mariada pod for wordpress
 
-![image](screenshots/capture15.png)
+![image](https://github.com/DOlivertech/SiteSpectK8s/blob/main/screenshots/capture15.PNG)
 
 `manage>dashboard>k8s>compute resources>workload/my-release-wordpress/deployment` shows metrics for the wordpress deployment
 
-![image](screenshots/capture16.png)
+![image](https://github.com/DOlivertech/SiteSpectK8s/blob/main/screenshots/capture16.PNG)
 
 `manage>dashboard>k8s>computeresources>cluster` for metrics for the cluster at large
 
-![image](screenshots/capture17.png)
+![image](https://github.com/DOlivertech/SiteSpectK8s/blob/main/screenshots/capture17.PNG)
 
 `kubectl port-forward prometheus-prometheus-kube-prometheus-prometheus-0 9090` , the config for prometheus ( prom.yaml ) shows me that prometheus is listening on port 9090.
 
-![image](screenshots/capture18.png)
-![image](screenshots/capture19.png)
-![image](screenshots/capture20.png)
+![image](https://github.com/DOlivertech/SiteSpectK8s/blob/main/screenshots/capture18.PNG)
+![image](https://github.com/DOlivertech/SiteSpectK8s/blob/main/screenshots/capture19.PNG)
+![image](https://github.com/DOlivertech/SiteSpectK8s/blob/main/screenshots/capture20.PNG)
 
 **This took about 1.5hrs with writing notes.**
 
