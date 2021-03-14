@@ -14,13 +14,13 @@
 
 `minikube service my-release-wordpress` > ← this alllowed me to access the loadbalancer service at 127.0.0.1 on port 56383
 
-![](screenshots/capture1.png)
-![](screenshots/capture2.png)
-![](screenshots/capture3.png)
-![](screenshots/capture4.png)
-![](screenshots/capture5.png)
-![](screenshots/capture6.png)
-![](screenshots/capture7.png)
+![](/screenshots/capture1.png)
+![](/screenshots/capture2.png)
+![](/screenshots/capture3.png)
+![](/screenshots/capture4.png)
+![](/screenshots/capture5.png)
+![](/screenshots/capture6.png)
+![](/screenshots/capture7.png)
 
 **For Prometheus**
 
@@ -34,7 +34,7 @@
 
 `helm install prometheus prometheus-community/kube-prometheus-stack` > ← install and call it prometheus
 
-![](screenshots/capture8.png)
+![](/screenshots/capture8.png)
 
 `kubectl get pods` > ← waiting for the pods to spin up
 
@@ -46,9 +46,9 @@
 
 > NodeExporter Daemon translates workernode metrics ( cpu usage, server load, etc ) to prometheus metrics
 
-![](screenshots/capture9.png)
-![](screenshots/capture10.png)
-![](screenshots/Capture.png)
+![](/screenshots/capture9.png)
+![](/screenshots/capture10.png)
+![](/screenshots/Capture.png)
 
 `kubectl get configmaps` ← displays the configmaps
 
@@ -68,28 +68,28 @@
 
 `kubectl port-forward deployment/prometheus-grafana 3000` ← exposes grafana on port 3000 ( creds admin, prom-operator ( default pw for the chart )
 
-![](screenshots/capture11.png)
-![](screenshots/capture12.png)
-![](screenshots/capture13.png)
-![](screenshots/capture14.png)
+![](/screenshots/capture11.png)
+![](/screenshots/capture12.png)
+![](/screenshots/capture13.png)
+![](/screenshots/capture14.png)
 
 `manage > dashboard > k8s>compute resources>pod/my-releae-mariadb-0` shows the metrics for the mariada pod for wordpress
 
-![](screenshots/capture15.png)
+![](/screenshots/capture15.png)
 
 `manage>dashboard>k8s>compute resources>workload/my-release-wordpress/deployment` shows metrics for the wordpress deployment
 
-![](screenshots/capture16.png)
+![](/screenshots/capture16.png)
 
 `manage>dashboard>k8s>computeresources>cluster` for metrics for the cluster at large
 
-![](screenshots/capture17.png)
+![](/screenshots/capture17.png)
 
 `kubectl port-forward prometheus-prometheus-kube-prometheus-prometheus-0 9090` , the config for prometheus ( prom.yaml ) shows me that prometheus is listening on port 9090.
 
-![](screenshots/capture18.png)
-![](screenshots/capture19.png)
-![](screenshots/capture20.png)
+![](/screenshots/capture18.png)
+![](/screenshots/capture19.png)
+![](/screenshots/capture20.png)
 
 **This took about 1.5hrs with writing notes.**
 
