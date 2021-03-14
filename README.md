@@ -1,6 +1,6 @@
-# SiteSpectK8s
+# SiteSpect Exercise K8s
 
-**Done on Windows due to WSL2 not supporting HyperV**
+**Done on Windows due to WSL2 not supporting HyperV** :computer:
 
 `helm repo add bitnami` [https://charts.bitnami.com/bitnami](https://charts.bitnami.com/bitnami) ← This is a Wordpress Chart that I am familiar with. [https://bitnami.com/stack/wordpress/helm](https://bitnami.com/stack/wordpress/helm)
 
@@ -14,15 +14,15 @@
 
 `minikube service my-release-wordpress` > ← this alllowed me to access the loadbalancer service at 127.0.0.1 on port 56383
 
-![](/screenshots/capture1.png)
-![](/screenshots/capture2.png)
-![](/screenshots/capture3.png)
-![](/screenshots/capture4.png)
-![](/screenshots/capture5.png)
-![](/screenshots/capture6.png)
-![](/screenshots/capture7.png)
+![image](screenshots/capture1.png)
+![image](screenshots/capture2.png)
+![image](screenshots/capture3.png)
+![image](screenshots/capture4.png)
+![image](screenshots/capture5.png)
+![image](screenshots/capture6.png)
+![image](screenshots/capture7.png)
 
-**For Prometheus**
+## **For Prometheus**
 
 **Installed prometheus operator**
 
@@ -34,7 +34,7 @@
 
 `helm install prometheus prometheus-community/kube-prometheus-stack` > ← install and call it prometheus
 
-![](/screenshots/capture8.png)
+![image](screenshots/capture8.png)
 
 `kubectl get pods` > ← waiting for the pods to spin up
 
@@ -46,9 +46,9 @@
 
 > NodeExporter Daemon translates workernode metrics ( cpu usage, server load, etc ) to prometheus metrics
 
-![](/screenshots/capture9.png)
-![](/screenshots/capture10.png)
-![](/screenshots/Capture.png)
+![image](screenshots/capture9.png)
+![image](screenshots/capture10.png)
+![image](screenshots/Capture.png)
 
 `kubectl get configmaps` ← displays the configmaps
 
@@ -68,28 +68,28 @@
 
 `kubectl port-forward deployment/prometheus-grafana 3000` ← exposes grafana on port 3000 ( creds admin, prom-operator ( default pw for the chart )
 
-![](/screenshots/capture11.png)
-![](/screenshots/capture12.png)
-![](/screenshots/capture13.png)
-![](/screenshots/capture14.png)
+![image](screenshots/capture11.png)
+![image](screenshots/capture12.png)
+![image](screenshots/capture13.png)
+![image](screenshots/capture14.png)
 
 `manage > dashboard > k8s>compute resources>pod/my-releae-mariadb-0` shows the metrics for the mariada pod for wordpress
 
-![](/screenshots/capture15.png)
+![image](screenshots/capture15.png)
 
 `manage>dashboard>k8s>compute resources>workload/my-release-wordpress/deployment` shows metrics for the wordpress deployment
 
-![](/screenshots/capture16.png)
+![image](screenshots/capture16.png)
 
 `manage>dashboard>k8s>computeresources>cluster` for metrics for the cluster at large
 
-![](/screenshots/capture17.png)
+![image](screenshots/capture17.png)
 
 `kubectl port-forward prometheus-prometheus-kube-prometheus-prometheus-0 9090` , the config for prometheus ( prom.yaml ) shows me that prometheus is listening on port 9090.
 
-![](/screenshots/capture18.png)
-![](/screenshots/capture19.png)
-![](/screenshots/capture20.png)
+![image](screenshots/capture18.png)
+![image](screenshots/capture19.png)
+![image](screenshots/capture20.png)
 
 **This took about 1.5hrs with writing notes.**
 
